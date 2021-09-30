@@ -1,0 +1,15 @@
+SetEnv PHP_VER 7
+SetEnv REGISTER_GLOBALS 0
+
+##RewriteEngine On
+##RewriteCond %{HTTP_HOST} !^www\.
+##RewriteRule .* http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+DirectoryIndex index.php index.html /erreur_401.php
+ErrorDocument 404 /erreur_404.php
+
+### Protection du fichier
+<files .htaccess>
+order allow,deny
+deny from all
+</files>

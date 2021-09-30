@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://neuro-soft.fr/sitemap.xml
